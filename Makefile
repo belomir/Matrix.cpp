@@ -10,9 +10,9 @@ obj = $(addprefix $(dir)/, $(cpp:.cpp=.o))
 latex = pdflatex -interaction=nonstopmode -output-directory $(dir)
 tex = report.tex
 pdf = $(tex:.tex=.pdf)
+out = $(dir)/output
 
-
-all: $(bin) $(pdf)
+all: $(bin) $(out) $(pdf)
 
 dir:
 	mkdir -p $(dir)
@@ -20,7 +20,9 @@ dir:
 run: $(bin)
 	./$<
 
-pdf: $(tex)
+$(pdf): pdf
+
+pdf: $(tex) $(out)
 	$(latex) $(tex)
 	$(latex) $(tex)
 	mv $(dir)/$(pdf) .
@@ -29,6 +31,9 @@ view: $(pdf)
 	xdg-open $< &
 
 bin: $(bin)
+
+$(out): $(bin)
+	./$(bin) > $(out)
 
 $(bin): $(obj)
 	$(cc) $(obj) -o $@
@@ -39,4 +44,4 @@ $(obj): $(dir)/%.o : %.cpp dir
 clean:
 	rm -rf $(dir)
 
-.PHONY: all run clean pdf view dir bin
+.PHONY: all run clean pdf view dir bin out
