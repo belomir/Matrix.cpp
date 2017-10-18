@@ -1,9 +1,3 @@
-/* 
- * Matrix.h
- * © 2017 Sergey Roganov <sergey@roganof.ru>
- * GNU/GPL v.3+
- */
-
 #include<vector>
 
 class Matrix
