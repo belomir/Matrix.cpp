@@ -1,3 +1,3 @@
 # Matrix.cpp
 Проект для ФПК НГТУ
-[afile](docs/index.md)
+[afile](svg.svg)
