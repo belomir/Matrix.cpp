@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% include info_comments %}
+{% include comments.html %}
 <!-- GNU/GPL v.3+ -->
 <html lang="ru">
 	{% include head.html %}
@@ -17,11 +17,9 @@
 </nav>
 <!-- main -->
 <main>
-	{{content}}
+	{{ content }}
 </main>
 <!-- footer -->
-<footer id="footer">
-	<small>&copy; Роганов Сергей, Новосибирск, 2017</small>
-</footer>
+{% include footer.html %}
 </body>
 </html>
