@@ -1,10 +1,12 @@
 <footer>
-	<p>
-		&copy; 
-		<a href="site.github.owner_url">
-			Сергей Роганов aka {{ site.github.owner_name }} 
-			<img src="{{ site.github.owner_gravatar_url }}" />
+	<span>
+		&copy; Сергей Роганов
+		aka <a href="{{ site.github.owner_url }}">
+			{{ site.github.owner_name }} 
 		</a>
+	</span>
+	<img src="{{ site.github.owner_gravatar_url }}" />
+	<span>
 		, {{ site.time | date: "%Y" }}
-	</p>
+	</span>
 </footer>
