@@ -1,7 +1,1 @@
-# site settings
-title: {{ site.github.project_title }}
-author: Роганов Сергей
-description: "Просто сайт проекта"
-
-#
 theme: jekyll-theme-cayman
