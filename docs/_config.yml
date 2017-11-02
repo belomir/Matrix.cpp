@@ -1,5 +1,5 @@
 # site settings
-title: {{ repository.name }}
+title: {{ site.github.project_title }}
 author: Роганов Сергей
 description: "Просто сайт проекта"
 
