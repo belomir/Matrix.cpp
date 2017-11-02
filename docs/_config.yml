@@ -1,1 +1,7 @@
+# site settings
+title: {{ repository.name }}
+author: Роганов Сергей
+description: "Просто сайт проекта"
+
+#
 theme: jekyll-theme-cayman
